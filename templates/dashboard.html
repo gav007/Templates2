@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&family=Poppins:wght@500;600;700&family=Playfair+Display:wght@500;600;700&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/create.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="landing_page.html">
+          <img src="/assets/favicon.svg" alt="Loop logo" />
+          <span class="brand-name">Loop</span>
+        </a>
+        <div class="search-bar-container">
+          <input type="text" class="field" name="search" placeholder="Search posts" />
+          <button class="btn" type="button">Search</button>
+        </div>
+        <a class="home-variant home-variant-outline" href="landing_page.html">Logout</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <div class="main-row">
+          <section class="card sidebar">
+            <h2>Menu</h2>
+            <nav>
+              <h3><a href="profile.html">Profile</a></h3>
+              <h3><a href="dashboard.html">Home Feed</a></h3>
+              <h3><a href="create_post.html">Create</a></h3>
+              <h3><a href="marketplace.html">Marketplace</a></h3>
+              <h3><a href="#">Messages</a></h3>
+            </nav>
+          </section>
+
+          <section class="card">
+            <h1>Dashboard</h1>
+            <p>Welcome back, [PHP: username]. A simple feed for buying, selling, and trading used electronics.</p>
+
+            <h3>Quick Actions</h3>
+            <div class="field-group">
+              <a class="btn-submit" href="create_post.html">Create New Post</a>
+              <a class="btn" href="profile.html">View Profile</a>
+            </div>
+          </section>
+        </div>
+
+        <!--USE PHP HERE TO INJECT LATEST POSTS FROM THE DATABASE-->
+        <div class="main-row">
+          <section class="card">
+            <h2>Recent Posts</h2>
+
+            <!-- PHP PLACEHOLDER: foreach ($recentPosts as $post) -->
+            <h3>[PHP: post_title]</h3>
+            <p>[PHP: post_excerpt]</p>
+            <p>[PHP: post_owner] | [PHP: post_date]</p>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">Copyright (c) Loop</div>
+    </footer>
+  </body>
+</html>

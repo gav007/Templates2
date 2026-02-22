@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop | Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&family=Poppins:wght@500;600;700&family=Playfair+Display:wght@500;600;700&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="landing_page.html">
+          <img src="/assets/favicon.svg" alt="Loop logo" />
+          <span class="brand-name">Loop</span>
+        </a>
+        <a class="home-variant home-variant-outline" href="landing_page.html">Home</a>
+      </div>
+    </header>
+
+    <main>
+      <!--main section-->
+      <div class="wrap">
+        <div class="main-row">
+          <!--card 1-->
+          <div class="card">
+            <div class="img-panel">
+              <img src="/assets/loop.png" class="hero-logo" alt="main-logo" />
+            </div>
+            <h2 class="hero-tagline">Give old tech a second life.</h2>
+            <p class="hero-copy">
+              Loop is a community for selling, swapping, and donating used electronics.
+            </p>
+            <p class="hero-copy">
+              From Arduino boards to RAM and old consoles, useful devices can stay in use.
+            </p>
+            <p class="hero-copy">
+              Post clear specs and condition details so others can reuse tech with confidence.
+            </p>
+          </div>
+
+          <!--card 2 form-->
+          <div class="card">
+            <h1>Create Your Loop Account</h1>
+            <!-- PHP PLACEHOLDER: form should submit to register_handler.php -->
+            <form action="dashboard.html" method="post">
+              <div class="field-group">
+                <label for="username">Username</label>
+                <input
+                  class="field"
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="e.g. tud123/StudentName"
+                  required
+                />
+              </div>
+
+              <div class="field-group">
+                <label for="email">Email</label>
+                <input
+                  class="field"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your Loop email"
+                  required
+                />
+              </div>
+
+              <div class="field-group">
+                <label for="password">Password</label>
+                <input
+                  class="field"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter password (Min of 8 characters)"
+                  required
+                />
+              </div>
+
+              <div class="field-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input
+                  class="field"
+                  type="password"
+                  id="confirm_password"
+                  name="confirm_password"
+                  placeholder="Confirm password"
+                  required
+                />
+              </div>
+
+              <button class="btn-submit" type="submit" id="reg-submit">Create Account</button>
+              <p id="password-notice">[PHP: registration error/success message]</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <!--footer-->
+      <div class="wrap">Copyright (c) Loop</div>
+    </footer>
+  </body>
+</html>
+
