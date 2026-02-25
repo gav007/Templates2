@@ -23,10 +23,21 @@
           <span class="brand-name">Loop</span>
         </a>
         <div class="search-bar-container">
-          <input type="text" class="field" id="search" name="search" placeholder="Search listings" />
+          <input
+            type="text"
+            class="field"
+            id="search"
+            name="search"
+            placeholder="Search listings"
+          />
           <button class="btn">Search</button>
         </div>
-        <a class="home-variant home-variant-outline" href="landing_page.html">Home</a>
+        <div style="display: flex; gap: 40px">
+          <button class="home-variant home-variant-outline" onclick="myFunction()">
+            Toggle dark mode
+          </button>
+          <a class="home-variant home-variant-outline" href="dashboard.html">Home</a>
+        </div>
       </div>
     </header>
 
@@ -39,17 +50,17 @@
             <h2>Menu</h2>
             <nav>
               <h3><a href="profile.html">Profile</a></h3>
-              <h3><a href="dashboard.html">Dashboard</a></h3>
               <h3><a href="create_post.html">Create</a></h3>
               <h3><a href="marketplace.html">Marketplace</a></h3>
-              <h3><a href="#">Messages</a></h3>
             </nav>
           </div>
 
           <!--card 2 form-->
           <div class="card main-content">
             <h1>Create A Post</h1>
-            <p class="hero-copy">Simple post form for electronics resale, trade, or wanted items.</p>
+            <p class="hero-copy">
+              Simple post form for electronics resale, trade, or wanted items.
+            </p>
             <!-- PHP PLACEHOLDER: form should submit to create_post_handler.php -->
             <form action="dashboard.html" method="post" enctype="multipart/form-data">
               <div class="field-group">
@@ -101,7 +112,13 @@
 
               <div class="field-group">
                 <label for="post-image">Upload Item Image</label>
-                <input class="field" type="file" id="post-image" name="post-image" accept="image/*" />
+                <input
+                  class="field"
+                  type="file"
+                  id="post-image"
+                  name="post-image"
+                  accept="image/*"
+                />
               </div>
 
               <button class="btn-submit" type="submit">Post</button>
@@ -115,6 +132,7 @@
     <footer>
       <!--footer-->
       <div class="wrap">Copyright (c) Loop</div>
+      <script src="/scripts/main.js"></script>
     </footer>
   </body>
 </html>

@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/create.css" />
   </head>
   <body>
     <header>
@@ -19,36 +20,40 @@
           <img src="/assets/favicon.svg" alt="Loop logo" />
           <span class="brand-name">Loop</span>
         </a>
-        <a class="home-variant home-variant-outline" href="dashboard.html">Dashboard</a>
+        <div style="display: flex; gap: 40px">
+          <button class="home-variant home-variant-outline" onclick="myFunction()">
+            Toggle dark mode
+          </button>
+          <a class="home-variant home-variant-outline" href="dashboard.html">Home</a>
+        </div>
       </div>
     </header>
 
     <main>
       <div class="wrap">
-        <div class="main-row">
-          <section class="card">
-            <h1>Electronics Marketplace</h1>
-            <p class="hero-copy">
-              Simple space to sell or trade used electronics instead of binning them.
-            </p>
-
-            <h3>Sample Listings</h3>
-            <!-- PHP PLACEHOLDER: loop through marketplace listings from database -->
-            <p><strong>[PHP: item_name]</strong> - [PHP: listing_type] - EUR [PHP: price]</p>
-            <p>[PHP: short_description]</p>
-            <p>[PHP: seller_username] | [PHP: posted_date]</p>
-
-            <h3>Tip</h3>
-            <p>Keep listings short: item name, condition, and price/trade details.</p>
+        <div class="main-row-nav">
+          <section class="card sidebar">
+            <h2>Menu</h2>
+            <nav>
+              <h3><a href="profile.html">Profile</a></h3>
+              <h3><a href="create_post.html">Create</a></h3>
+              <h3><a href="marketplace.html">Marketplace</a></h3>
+            </nav>
           </section>
-
-          <section class="card">
+          <section class="card main-content">
             <h2>Add Listing</h2>
             <!-- PHP PLACEHOLDER: form should submit to marketplace_create.php -->
             <form action="marketplace.html" method="post" enctype="multipart/form-data">
               <div class="field-group">
                 <label for="item-name">Item Name</label>
-                <input class="field" type="text" id="item-name" name="item-name" placeholder="e.g. Arduino Uno R3" required />
+                <input
+                  class="field"
+                  type="text"
+                  id="item-name"
+                  name="item-name"
+                  placeholder="e.g. Arduino Uno R3"
+                  required
+                />
               </div>
 
               <div class="field-group">
@@ -83,7 +88,14 @@
 
               <div class="field-group">
                 <label for="item-price">Price</label>
-                <input class="field" type="text" id="item-price" name="item-price" placeholder="e.g. EUR 20 or Trade only" required />
+                <input
+                  class="field"
+                  type="text"
+                  id="item-price"
+                  name="item-price"
+                  placeholder="e.g. EUR 20 or Trade only"
+                  required
+                />
               </div>
 
               <div class="field-group">
@@ -99,7 +111,13 @@
 
               <div class="field-group">
                 <label for="item-image">Item Image</label>
-                <input class="field" type="file" id="item-image" name="item-image" accept="image/*" />
+                <input
+                  class="field"
+                  type="file"
+                  id="item-image"
+                  name="item-image"
+                  accept="image/*"
+                />
               </div>
 
               <button class="btn-submit" type="submit">Post Listing</button>
@@ -112,6 +130,7 @@
 
     <footer>
       <div class="wrap">Copyright (c) Loop</div>
+      <script src="/scripts/main.js"></script>
     </footer>
   </body>
 </html>

@@ -55,7 +55,12 @@
           <div class="card">
             <h1>Create Your Loop Account</h1>
             <!-- PHP PLACEHOLDER: form should submit to register_handler.php -->
-            <form name="myForm" action="dashboard.html" method="post">
+            <form
+              name="myForm"
+              onsubmit="return validatePassword();"
+              action="dashboard.html"
+              method="get"
+            >
               <div class="field-group">
                 <label for="username">Username</label>
                 <input

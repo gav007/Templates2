@@ -24,27 +24,33 @@
           <input type="text" class="field" name="search" placeholder="Search posts" />
           <button class="btn" type="button">Search</button>
         </div>
-        <a class="home-variant home-variant-outline" href="landing_page.html">Logout</a>
+        <div style="display: flex; gap: 40px">
+          <button class="home-variant home-variant-outline" onclick="myFunction()">
+            Toggle dark mode
+          </button>
+          <a class="home-variant home-variant-outline" href="landing_page.html">Log Out</a>
+        </div>
       </div>
     </header>
 
     <main>
       <div class="wrap">
-        <div class="main-row">
+        <div class="main-row-nav">
           <section class="card sidebar">
             <h2>Menu</h2>
             <nav>
               <h3><a href="profile.html">Profile</a></h3>
-              <h3><a href="dashboard.html">Home Feed</a></h3>
               <h3><a href="create_post.html">Create</a></h3>
               <h3><a href="marketplace.html">Marketplace</a></h3>
-              <h3><a href="#">Messages</a></h3>
             </nav>
           </section>
 
-          <section class="card">
+          <section class="card main-content">
             <h1>Dashboard</h1>
-            <p>Welcome back, [PHP: username]. A simple feed for buying, selling, and trading used electronics.</p>
+            <p>
+              Welcome back, [PHP: username]. A simple feed for buying, selling, and trading used
+              electronics.
+            </p>
 
             <h3>Quick Actions</h3>
             <div class="field-group">
@@ -59,12 +65,11 @@
           <section class="card">
             <h2>Recent Posts</h2>
 
-            <!-- PHP PLACEHOLDER: foreach ($recentPosts as $post) -->
+            <!-- PHP PLACEHOLDER: -->
             <h3>[PHP: post_title]</h3>
             <p>[PHP: post_excerpt]</p>
             <p>[PHP: post_owner] | [PHP: post_date]</p>
           </section>
-
         </div>
       </div>
     </main>
@@ -72,5 +77,6 @@
     <footer>
       <div class="wrap">Copyright (c) Loop</div>
     </footer>
+    <script src="/scripts/main.js"></script>
   </body>
 </html>
