@@ -27,7 +27,3 @@ function validatePassword() {
 
 // 1. Find the logo text box
 const logoText = document.querySelector(".brand-name");
-
-// 2. The word we want to type
-const word = "Loop";
-let letterIndex = 0;
